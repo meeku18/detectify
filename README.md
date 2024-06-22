@@ -66,4 +66,4 @@ Learn how to build an object detection model with Ultralytics YOLO and Roboflow 
 
 ## Contact
 
-For questions or support, please contact us at hrishabhjais18@gmai.com.
+For questions or support, please contact us at hrishabhjais18@gmail.com.
