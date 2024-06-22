@@ -46,12 +46,13 @@ Copy code
 
 ## Building an Object Detection Model
 
-Learn how to build an object detection model with Ultralytics YOLO and Roboflow by following our comprehensive guide [here](link-to-guide).
+Learn how to build an object detection model with Ultralytics YOLO and Roboflow <a href='https://docs.ultralytics.com/models/yolov8/'>Here</a>.
 
 ## Current Limitations
 
 - Difficulty in identifying and purchasing products featured in video content.
 - Lack of seamless integration between video content and e-commerce platforms.
+- Large processing time of video content.
 
 ## Customer Pain Points
 
