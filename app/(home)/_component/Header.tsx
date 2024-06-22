@@ -11,14 +11,14 @@ export default function Header() {
     console.log(path);
   }, []);
   return (
-    <div className="bg-secondary shadow-md p-3 px-4 ">
+    <div className="bg-secondary shadow-md p-3 px-6 ">
       <div className="flex justify-between items-center justify-center">
         <Logo />
-        <div className=" hidden md:flex gap-4 ">
+        <div className=" hidden md:flex gap-8 ">
           <Link href="/">
             <div
               className={`hover:text-primary hover:font-bold tran transition-all cursor-pointer ${
-                path == "/" && "text-primary font-bold"
+                path == "/" && "text-primary font-semibold"
               }`}
             >
               Home{" "}
@@ -27,7 +27,7 @@ export default function Header() {
           <Link href="/upload">
             <div
               className={`hover:text-primary hover:font-bold tran transition-all cursor-pointer ${
-                path == "/upload" && "text-primary font-bold"
+                path == "/upload" && "text-primary font-semibold"
               }`}
             >
               Upload Video{" "}
@@ -36,7 +36,7 @@ export default function Header() {
           <Link href="/detection">
             <div
               className={`hover:text-primary hover:font-bold tran transition-all cursor-pointer ${
-                path == "/detection" && "text-primary font-bold"
+                path == "/detection" && "text-primary font-semibold"
               }`}
             >
               Detection Results{" "}
@@ -45,7 +45,7 @@ export default function Header() {
           <Link href="/work">
             <div
               className={`hover:text-primary hover:font-bold tran transition-all cursor-pointer ${
-                path == "/work" && "text-primary font-bold"
+                path == "/work" && "text-primary font-semibold"
               }`}
             >
               How it Works

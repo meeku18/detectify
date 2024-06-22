@@ -58,15 +58,15 @@ export default function Upload() {
           <h2 className="text-2xl font-bold mb-6 md:mb-8">FAQs</h2>
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
-              <AccordionTrigger>Should video be in MP3 format?</AccordionTrigger>
+              <AccordionTrigger>Support imgae and video both?</AccordionTrigger>
               <AccordionContent>
-                Yes. Currently our model supports MP3 format.
+                Yes. Currently our frontend only support image , but model does support both.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
-              <AccordionTrigger>Is it styled?</AccordionTrigger>
+              <AccordionTrigger>Can image be in jpg or png?</AccordionTrigger>
               <AccordionContent>
-                Yes. It comes with default styles that match the other components' aesthetic.
+                It can be in both format
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">

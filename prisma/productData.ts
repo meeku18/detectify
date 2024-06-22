@@ -1,3 +1,4 @@
+// seed data
 export const items = [
     { productName: 'NightStand Light', productUrl: 'https://shorturl.at/ZmgEy' },
     { productName: 'Lamp', productUrl: 'https://shorturl.at/Uhj5G' },
