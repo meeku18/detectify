@@ -2,6 +2,8 @@
 
 Detectify is a platform that enhances shopping experiences through advanced machine learning and visual AI technologies. Users can upload images or videos to identify corresponding products on Amazon, facilitating seamless product search, recommendations, and direct purchases.
 
+**Check out our demo video [here](https://drive.google.com/file/d/14m0qEbtdzwA3NMjwRjkxldL0q2IeAZ_y/view?usp=sharing).**
+
 ## Features
 
 - **Image and Video Upload**: Upload images or videos to detect products using machine learning model DETECTIFY.
@@ -56,7 +58,6 @@ Learn how to build an object detection model with Ultralytics YOLO and Roboflow 
 ## Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request with your changes.
-
 
 ## Acknowledgments
 
