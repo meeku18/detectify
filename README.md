@@ -58,10 +58,6 @@ Learn how to build an object detection model with Ultralytics YOLO and Roboflow 
 - **Fragmented Experience**: Users face inconvenience switching between video content and shopping platforms.
 - **Lack of Personalization & Missed Opportunities**: Absence of direct purchase options leads to missed chances for spontaneous purchases.
 
-## Contributing
-
-Contributions are welcome! Please fork the repository and submit a pull request with your changes.
-
 ## Acknowledgments
 
 - Ultralytics YOLO and Roboflow for their powerful object detection tools.
