@@ -1,5 +1,5 @@
-# Detectify
 
+<h1> DETECTIFY </h1>
 Detectify is a platform that enhances shopping experiences through advanced machine learning and visual AI technologies. Users can upload images or videos to identify corresponding products on Amazon, facilitating seamless product search, recommendations, and direct purchases.
 
 - Currently we are in prototyping mode so the model may not be very much accurate (since it is trained on very small dataset ).
