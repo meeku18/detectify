@@ -1,61 +1,71 @@
-Detectify
+# Detectify
+
 Detectify is a platform that enhances shopping experiences through advanced machine learning and visual AI technologies. Users can upload images or videos to identify corresponding products on Amazon, facilitating seamless product search, recommendations, and direct purchases.
 
-Features
-Image and Video Upload: Upload images or videos to detect products using machine learning model DETECTIFY.
-Enhanced Shopping Experience: Utilize visual AI for improved product search, recommendations, and item identification in text, images, and videos.
-Object Detection Model: Built with Ultralytics YOLO and Roboflow for efficient object detection.
-X-ray Feature: Extend Amazon Prime Video's X-ray feature for direct purchases from videos.
-Personalized Recommendations: Analyze user behavior for personalized product suggestions.
-Global Reach: Available globally with localization in languages, currencies, and shopping behaviors.
-Marketplace Domain Expansion: Expand to new regions and product categories for a wider selection.
-Getting Started
+## Features
+
+- **Image and Video Upload**: Upload images or videos to detect products using machine learning model DETECTIFY.
+- **Enhanced Shopping Experience**: Utilize visual AI for improved product search, recommendations, and item identification in text, images, and videos.
+- **Object Detection Model**: Built with Ultralytics YOLO and Roboflow for efficient object detection.
+- **X-ray Feature**: Extend Amazon Prime Video's X-ray feature for direct purchases from videos.
+- **Personalized Recommendations**: Analyze user behavior for personalized product suggestions.
+- **Global Reach**: Available globally with localization in languages, currencies, and shopping behaviors.
+- **Marketplace Domain Expansion**: Expand to new regions and product categories for a wider selection.
+
+## Getting Started
+
 To get started with Detectify, follow these steps:
 
-Clone the repository:
-
-bash
-Copy code
+1. **Clone the repository**:
 git clone https://github.com/your-username/detectify.git
 cd detectify
-Set up your environment:
 
-Ensure you have Python 3.7+ installed.
-Install dependencies:
+markdown
 Copy code
-pip install -r requirements.txt
-Run the application:
 
-Copy code
+2. **Set up your environment**:
+- Ensure you have Python 3.7+ installed.
+- Install dependencies:
+  ```
+  pip install -r requirements.txt
+  ```
+
+3. **Run the application**:
 python app.py
-Access Detectify:
 
-Open your web browser and go to http://localhost:5000 to use the application.
-Building an Object Detection Model
-Learn how to build an object detection model with Ultralytics YOLO and Roboflow by following our comprehensive guide here.
+markdown
+Copy code
 
-Current Limitations
-Difficulty in identifying and purchasing products featured in video content.
-Lack of seamless integration between video content and e-commerce platforms.
-Customer Pain Points
-Fragmented Experience: Users face inconvenience switching between video content and shopping platforms.
-Lack of Personalization & Missed Opportunities: Absence of direct purchase options leads to missed chances for spontaneous purchases.
-Contributing
+4. **Access Detectify**:
+- Open your web browser and go to `http://localhost:5000` to use the application.
+
+## Building an Object Detection Model
+
+Learn how to build an object detection model with Ultralytics YOLO and Roboflow by following our comprehensive guide [here](link-to-guide).
+
+## Current Limitations
+
+- Difficulty in identifying and purchasing products featured in video content.
+- Lack of seamless integration between video content and e-commerce platforms.
+
+## Customer Pain Points
+
+- **Fragmented Experience**: Users face inconvenience switching between video content and shopping platforms.
+- **Lack of Personalization & Missed Opportunities**: Absence of direct purchase options leads to missed chances for spontaneous purchases.
+
+## Contributing
+
 Contributions are welcome! Please fork the repository and submit a pull request with your changes.
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+## License
 
-Acknowledgments
-Ultralytics YOLO and Roboflow for their powerful object detection tools.
-Amazon Prime Video for the inspiration behind the X-ray feature.
-Contact
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Ultralytics YOLO and Roboflow for their powerful object detection tools.
+- Amazon Prime Video for the inspiration behind the X-ray feature.
+
+## Contact
+
 For questions or support, please contact us at detectify@example.com.
-
-Feel free to customize this template further to fit the specifics of your project and provide more detailed instructions or additional sections as needed.
-
-
-
-
-
-
