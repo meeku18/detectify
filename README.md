@@ -2,7 +2,10 @@
 
 Detectify is a platform that enhances shopping experiences through advanced machine learning and visual AI technologies. Users can upload images or videos to identify corresponding products on Amazon, facilitating seamless product search, recommendations, and direct purchases.
 
-**Check out our demo video [here](https://drive.google.com/file/d/14m0qEbtdzwA3NMjwRjkxldL0q2IeAZ_y/view?usp=sharing).**
+- Currently we are in prototyping mode so the model may not be very much accurate (since it is trained on very small dataset ).
+- In order to see the product in action you can see the video demonstration.
+- <a href='https://drive.google.com/file/d/14m0qEbtdzwA3NMjwRjkxldL0q2IeAZ_y/view?usp=sharing' target="_blank"> Here </a>
+
 
 ## Features
 
