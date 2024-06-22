@@ -37,7 +37,7 @@ markdown
 Copy code
 
 4. **Access Detectify**:
-- Open your web browser and go to `http://localhost:5000` to use the application.
+- Open your web browser and go to `http://localhost:3000` to use the application.
 
 ## Building an Object Detection Model
 
@@ -57,9 +57,6 @@ Learn how to build an object detection model with Ultralytics YOLO and Roboflow 
 
 Contributions are welcome! Please fork the repository and submit a pull request with your changes.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
@@ -68,4 +65,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-For questions or support, please contact us at detectify@example.com.
+For questions or support, please contact us at hrishabhjais18@gmai.com.
