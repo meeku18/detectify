@@ -1,12 +1,12 @@
 "use client"
 import React, { useState } from 'react';
 import axios from 'axios';
-import useLinkStore from '@/store/store';
+import {useLinkStore1} from '@/store/store';
 
 export function FileUploader() {
   const [fileName, setFileName] = useState('No file chosen');
   const [imagePreviewUrl, setImagePreviewUrl] = useState('');
-  const addName = useLinkStore((state) => state.addName);
+  const addName = useLinkStore1((state) => state.addName);
 
   const handleFileChange = async (event:any) => {
     event.preventDefault();

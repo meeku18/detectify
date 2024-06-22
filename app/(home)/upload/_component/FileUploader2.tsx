@@ -1,12 +1,12 @@
 "use client"
 import React, { useState } from 'react';
 import axios from 'axios';
-import useLinkStore from '@/store/store';
+import {useLinkStore2} from '@/store/store';
 
 export function FileUploader2() {
   const [fileName, setFileName] = useState('No file chosen');
-  const [imagePreviewUrl, setImagePreviewUrl] = useState('');
-  const addName = useLinkStore((state) => state.addName);
+  const [imagePriview, setimagePriview] = useState('');
+  const addName = useLinkStore2((state) => state.addName);
 
   const handleFileChange = async (event:any) => {
     event.preventDefault();
@@ -20,7 +20,7 @@ export function FileUploader2() {
     formData.append('file', file);
 
     try {
-      const response = await axios.post('http://localhost:8000/upload/', formData, {
+      const response = await axios.post('http://localhost:8001/upload/', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -29,12 +29,12 @@ export function FileUploader2() {
       const responseData = JSON.parse(response.data);
       console.log(responseData);
       if (Array.isArray(responseData) && responseData.length > 0 && responseData[0].name) {
-        const productName = responseData[0].name.split(' ')[0];
+        const productName = responseData[0].name;
         console.log(productName); // Should print "AsianShoes"
         // Set the file name (assuming setFileName is a valid function in your context)
         setFileName(file.name);
-        addName(productName,imagePreviewUrl);
-        setImagePreviewUrl('');
+        addName(productName,imagePriview);
+        setimagePriview('');
     } else {
         console.error("The response data is not in the expected format or is missing 'name' property");
     }
@@ -53,11 +53,11 @@ export function FileUploader2() {
       const reader = new FileReader();
       reader.onloadend = () => {
         console.log(reader.result);
-        setImagePreviewUrl(reader.result);
+        setimagePriview(reader.result);
       };
       reader.readAsDataURL(file);
     } else {
-      setImagePreviewUrl('');
+      setimagePriview('');
     }
   };
 
@@ -82,9 +82,9 @@ export function FileUploader2() {
           />
           <span id="file-name">{fileName}</span>
         </div>
-        {imagePreviewUrl && (
+        {imagePriview && (
           <div className="mb-4">
-            <img src={imagePreviewUrl} alt="Selected File Preview" className="max-w-full h-auto" />
+            <img src={imagePriview} alt="Selected File Preview" className="max-w-full h-auto" />
           </div>
         )}
         <input
