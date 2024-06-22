@@ -1,6 +1,6 @@
 
 import { PrismaClient } from "@prisma/client";
-import { items } from "./productNeerajWhatsapp";
+import { items } from "./productData";
 
 const prisma = new PrismaClient();
 async function main(){

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import useLinkStore from '@/store/store';
 
-export function FileUploader() {
+export function FileUploader2() {
   const [fileName, setFileName] = useState('No file chosen');
   const [imagePreviewUrl, setImagePreviewUrl] = useState('');
   const addName = useLinkStore((state) => state.addName);
@@ -62,8 +62,8 @@ export function FileUploader() {
   };
 
   return (
-    <div className="p-5 border rounded-md">
-      <h1 className="font-bold mb-4 text-xl text-zinc-800">X-Ray</h1>
+    <div className="p-5 border rounded-md ">
+      <h1 className="font-bold mb-4 text-xl text-zinc-800">Recommandation Engine</h1>
       <h2 className="mb-4 text-black">Select a image/video to upload</h2>
       <form onSubmit={handleFileChange} encType="multipart/form-data">
         <div className="flex items-center space-x-4 mb-4">

@@ -48,7 +48,7 @@ const Detection: React.FC<DetectionProps> = () => {
     };
 
     return (
-        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', padding: '20px', fontFamily: 'Arial, sans-serif' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', padding: '20px', fontFamily: 'Arial, sans-serif' }}>
             {names.map((item, index) => {
                 // Find corresponding item in items array
                 const foundItem = findItemByName(item.name);
@@ -58,17 +58,18 @@ const Detection: React.FC<DetectionProps> = () => {
                     const serialNumber = index + 1;
 
                     return (
-                        <div key={index} style={{ width: '30%', marginBottom: '15px', textAlign: 'center' }}>
-                            <p style={{ fontWeight: 'bold' }}>{serialNumber}. {foundItem.productName}</p>
-                            {/* Assuming there is a typeLink property on the item */}
-                            <img src={item.typeLink} alt={foundItem.productName} style={{ maxWidth: '100%', height: 'auto', marginBottom: '10px' }} />
-                            <a href={foundItem.productUrl} target="_blank" rel="noopener noreferrer" style={{ color: 'blue', textDecoration: 'none' }}>{foundItem.productUrl}</a>
+                        <div key={index} style={{ padding: '10px', border: '1px solid #ccc', borderRadius: '8px', textAlign: 'center', backgroundColor: '#f9f9f9' }}>
+                            <p style={{ fontWeight: 'bold', marginBottom: '10px' }}>{serialNumber}. {foundItem.productName}</p>
+                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <img src={item.typeLink} alt={foundItem.productName} style={{ maxWidth: '100px', height: 'auto', marginRight: '10px', borderRadius: '4px' }} />
+                                <a href={foundItem.productUrl} target="_blank" rel="noopener noreferrer" style={{ color: '#007bff', textDecoration: 'none' }}>{foundItem.productUrl}</a>
+                            </div>
                         </div>
                     );
                 } else {
                     return (
-                        <div key={index} style={{ width: '30%', marginBottom: '15px', textAlign: 'center' }}>
-                            <p>No match found for "{item.name}"</p>
+                        <div key={index} style={{ padding: '10px', border: '1px solid #ccc', borderRadius: '8px', textAlign: 'center', backgroundColor: '#f9f9f9' }}>
+                            <p style={{ fontWeight: 'bold', color: '#ff0000' }}>No match found for "{item.name}"</p>
                         </div>
                     );
                 }
