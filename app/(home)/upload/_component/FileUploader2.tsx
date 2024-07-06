@@ -1,16 +1,16 @@
-"use client"
-import React, { useState } from 'react';
+"use client";
+import React, { useState, ChangeEvent, FormEvent } from 'react';
 import axios from 'axios';
-import {useLinkStore2} from '@/store/store';
+import { useLinkStore2 } from '@/store/store';
 
 export function FileUploader2() {
-  const [fileName, setFileName] = useState('No file chosen');
-  const [imagePriview, setimagePriview] = useState('');
+  const [fileName, setFileName] = useState<string>('No file chosen');
+  const [imagePreview, setImagePreview] = useState<string>('');
   const addName = useLinkStore2((state) => state.addName);
 
-  const handleFileChange = async (event:any) => {
+  const handleFileChange = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const fileInput = event.target.file;
+    const fileInput = event.currentTarget.file as HTMLInputElement;
     if (!fileInput || !fileInput.files || !fileInput.files[0]) {
       setFileName('No file chosen');
       return;
@@ -30,21 +30,20 @@ export function FileUploader2() {
       console.log(responseData);
       if (Array.isArray(responseData) && responseData.length > 0 && responseData[0].name) {
         const productName = responseData[0].name;
-        console.log(productName); // Should print "AsianShoes"
-        // Set the file name (assuming setFileName is a valid function in your context)
+        console.log(productName); // Should print the product name
         setFileName(file.name);
-        addName(productName,imagePriview);
-        setimagePriview('');
-    } else {
+        addName(productName, imagePreview);
+        setImagePreview('');
+      } else {
         console.error("The response data is not in the expected format or is missing 'name' property");
-    }
+      }
     } catch (error) {
       console.error('Error uploading file:', error);
       setFileName('No file chosen');
     }
   };
 
-  const handleInputChange = (event:any) => {
+  const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files && event.target.files[0];
     setFileName(file ? file.name : 'No file chosen');
 
@@ -53,18 +52,18 @@ export function FileUploader2() {
       const reader = new FileReader();
       reader.onloadend = () => {
         console.log(reader.result);
-        setimagePriview(reader.result);
+        setImagePreview(reader.result as string);
       };
       reader.readAsDataURL(file);
     } else {
-      setimagePriview('');
+      setImagePreview('');
     }
   };
 
   return (
-    <div className="p-5 border rounded-md ">
-      <h1 className="font-bold mb-4 text-xl text-zinc-800">Recommandation Engine</h1>
-      <h2 className="mb-4 text-black">Select a image/video to upload</h2>
+    <div className="p-5 border rounded-md">
+      <h1 className="font-bold mb-4 text-xl text-zinc-800">Recommendation Engine</h1>
+      <h2 className="mb-4 text-black">Select an image/video to upload</h2>
       <form onSubmit={handleFileChange} encType="multipart/form-data">
         <div className="flex items-center space-x-4 mb-4">
           <label
@@ -82,9 +81,9 @@ export function FileUploader2() {
           />
           <span id="file-name">{fileName}</span>
         </div>
-        {imagePriview && (
+        {imagePreview && (
           <div className="mb-4">
-            <img src={imagePriview} alt="Selected File Preview" className="max-w-full h-auto" />
+            <img src={imagePreview} alt="Selected File Preview" className="max-w-full h-auto" />
           </div>
         )}
         <input
