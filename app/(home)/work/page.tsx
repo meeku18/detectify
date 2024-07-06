@@ -6,7 +6,7 @@ export default function Work() {
         <p>
           Enhance shopping using visual AI for better product search,
           recommendations, and item identification in text, images, and videos.
-          Implement image recognition and extend Amazon Prime Video's X-ray
+          Implement image recognition and extend Amazon Prime Video&apos; X-ray
           feature for direct purchases from videos. Aim for a seamless,
           personalized shopping experience.
         </p>
@@ -52,7 +52,7 @@ export default function Work() {
           </div>
           <div>
             <h4 className="font-bold">Enhanced X-ray Feature:</h4>
-            <p>Extend the concept of Amazon Prime Video's X-ray feature to identify products in video content. Allow users to click on items within a video to get detailed information and purchase options.</p>
+            <p>Extend the concept of Amazon Prime Video&apos; X-ray feature to identify products in video content. Allow users to click on items within a video to get detailed information and purchase options.</p>
           </div>
           <div>
             <h4 className="font-bold">Visual Product Search:</h4>
