@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { useLinkStore1, useLinkStore2 } from "@/store/store";
 
@@ -8,6 +8,11 @@ type Item = {
 };
 
 type DetectionProps = {};
+
+type NameType = {
+  name: string;
+  typeLink: string;
+};
 
 const items: Item[] = [
   { productName: 'NightStand Light', productUrl: 'https://shorturl.at/ZmgEy' },
@@ -24,7 +29,7 @@ const items: Item[] = [
   { productName: 'Black Cup', productUrl: 'https://rb.gy/hb29pd' },
 ];
 
-const AmanData = {
+const AmanData: Record<string, string[]> = {
   "Black Trousers": [
     "https://rb.gy/tqvljv",
     "https://rb.gy/ga5ipi",
@@ -48,8 +53,8 @@ const AmanData = {
 };
 
 const Detection: React.FC<DetectionProps> = () => {
-  const names1 = useLinkStore1((state) => state.names);
-  const names2 = useLinkStore2((state) => state.names);
+  const names1 = useLinkStore1((state) => state.names as NameType[]);
+  const names2 = useLinkStore2((state) => state.names as NameType[]);
 
   const findItemByName = (name: string): Item | undefined => {
     let foundItem = items.find(item => item.productName.toLowerCase() === name.toLowerCase());
@@ -89,13 +94,12 @@ const Detection: React.FC<DetectionProps> = () => {
                   <>
                     <p style={{ fontWeight: 'bold', marginBottom: '10px' }}>{index + 1}. {foundItem.productName}</p>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                      {/* Assuming item.typeLink is string */}
                       <img src={item.typeLink} alt={foundItem.productName} style={{ maxWidth: '100px', height: 'auto', marginRight: '10px', borderRadius: '4px' }} />
                       <a href={foundItem.productUrl} target="_blank" rel="noopener noreferrer" style={{ color: '#007bff', textDecoration: 'none' }}>{foundItem.productUrl}</a>
                     </div>
                   </>
                 ) : (
-                  <p style={{ fontWeight: 'bold', color: '#ff0000' }}>No match found for "{item.name}"</p>
+                  <p style={{ fontWeight: 'bold', color: '#ff0000' }}>No match found for {item.name}</p>
                 )}
               </div>
             );
@@ -122,7 +126,7 @@ const Detection: React.FC<DetectionProps> = () => {
                     </div>
                   </>
                 ) : (
-                  <p style={{ fontWeight: 'bold', color: '#ff0000' }}>No match found for "{item.name}"</p>
+                  <p style={{ fontWeight: 'bold', color: '#ff0000' }}>No match found for {item.name}</p>
                 )}
               </div>
             );
