@@ -62,6 +62,6 @@ async def upload_image(file: UploadFile = File(...)):
 
 # Function to run the FastAPI app
 def start_server():
-    uvicorn.run(app, host="localhost", port=8000)
+    uvicorn.run(app, host="localhost", port=8001)
 
 start_server()
